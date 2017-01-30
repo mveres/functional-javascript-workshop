@@ -1,0 +1,14 @@
+{
+  "presets": ["latest"],
+  "plugins": [
+    "transform-es2015-destructuring",
+    "transform-es2015-parameters",
+    "transform-object-rest-spread",
+    "add-module-exports",
+    "transform-decorators-legacy",
+    "transform-react-display-name"
+  ],
+  "ignore": [
+    "node_modules/**/*.js"
+  ]
+}
