@@ -1,3 +1,8 @@
+Contact Mihai: mihai@craftingsoftware.com
+Contact Adrian: adrian@craftingsoftware.com
+
+#Why functional programming
+
 #Immutability
 
 There are no _variables_, everything is a _value_.
@@ -213,4 +218,32 @@ console.log(tailRecursiveFilter([1, 3, 6, 8], isEven));
 ```
 
 #Execises
- hint: lodash is your friend
+
+```bash
+git clone https://github.com/mveres/functional-javascript-workshop.git
+npm install yarn -g
+yarn
+npm run test
+
+
+git checkout exercise1
+npm run test
+
+git checkout exercise1-solution
+npm run test
+
+
+git checkout exercise2
+npm run test
+
+git checkout exercise2-solution
+npm run test
+```
+ (hint: lodash is your friend)
+
+
+###Further Reading/Learning
+- Programing F# by Chris Smith
+- Functional Programming Principles in Scala by Martin Odersky (https://www.coursera.org/learn/progfun1)
+- Introduction to Functional Programming by Erik Meijer (https://www.edx.org/course/introduction-functional-programming-delftx-fp101x-0)
+- https://fsharpforfunandprofit.com/
