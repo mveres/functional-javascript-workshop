@@ -33,6 +33,7 @@ const parse = data => {
 
 };
 
+const getTop3BiggestChanges = () => [];
 
 describe('test suite', () => {
   it('data is parsed correctly', async () => {
@@ -49,5 +50,14 @@ describe('test suite', () => {
       changeAbsolute: -0.0045,
       changePercent: -0.42,
     });
+  });
+
+  it('top 3 biggest (percentage) changes are retrieved correctly', () => {
+
+    const currencyPair = getTop3BiggestChanges(marketData);
+
+    console.log(JSON.stringify(currencyPair, null, 2));
+
+    expect(currencyPair).to.deep.equal(['EUR/JPY', 'USD/CAD', 'USD/JPY']);
   });
 });
