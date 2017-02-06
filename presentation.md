@@ -213,4 +213,20 @@ console.log(tailRecursiveFilter([1, 3, 6, 8], isEven));
 ```
 
 #Execises
- hint: lodash is your friend
+
+```bash
+git clone https://github.com/mveres/functional-javascript-workshop.git
+
+
+git checkout exercise1
+
+
+git checkout exercise1-solution
+
+
+git checkout exercise2
+
+
+git checkout exercise2-solution
+```
+ (hint: lodash is your friend)
