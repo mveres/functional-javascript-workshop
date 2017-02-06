@@ -13,7 +13,25 @@ EUR/JPY   120.3150         -1.1050     -0.91
 EUR/GBP     0.8604         -0.0032     -0.37
 `;
 
-const parse = () => {};
+const parse = data => {
+  const lineToArray = line => line.split(' ').filter(i => !!i);
+
+  const [header, ...lines] = data.split('\n')
+                                 .filter(i => !!i)
+                                 .map(lineToArray);
+
+  const lineToObject = line =>
+    line.reduce(
+      (acc, val, idx) => ({
+        ...acc,
+        [header[idx]]: idx === 0 ? val : parseFloat(val),
+      }),
+      {},
+    );
+
+  return lines.map(lineToObject);
+
+};
 
 describe('test suite', () => {
   it('data is parsed correctly', () => {
