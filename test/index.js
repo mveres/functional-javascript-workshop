@@ -1,4 +1,5 @@
 import { expect } from 'chai';
+import _ from 'lodash';
 
 const marketData = `
 currencyPair price   changeAbsolute changePercent
@@ -33,7 +34,12 @@ const parse = data => {
 
 };
 
-const getTop3BiggestChanges = () => [];
+const getTop3BiggestChanges = dataString =>
+  _(parse(dataString))
+    .sortBy(d => -Math.abs(d.changePercent))
+    .take(3)
+    .map(d => d.currencyPair)
+    .value();
 
 describe('test suite', () => {
   it('data is parsed correctly', () => {
