@@ -33,8 +33,9 @@ const parse = data => {
 
 };
 
+
 describe('test suite', () => {
-  it('data is parsed correctly', () => {
+  it('data is parsed correctly', async () => {
 
     const data = parse(marketData);
     expect(data.length).to.equal(9);
