@@ -36,7 +36,7 @@ const parse = data => {
 const getTop3BiggestChanges = () => [];
 
 describe('test suite', () => {
-  it('data is parsed correctly', async () => {
+  it('data is parsed correctly', () => {
 
     const data = parse(marketData);
     expect(data.length).to.equal(9);
